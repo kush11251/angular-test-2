@@ -1,0 +1,325 @@
+/* --- Base Container (Simulating Mobile Screen) --- */
+.mobile-app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Header --- */
+.app-header {
+  background-color: #003366; /* Bajaj Brand Blue */
+  padding: 12px 16px;
+  color: white;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-icon {
+  background: white;
+  color: #003366;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.emi-badge {
+  background: #ffcc00;
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.prime-badge {
+  color: #00a8ff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  background: white;
+  border-radius: 4px;
+  padding: 8px 12px;
+  align-items: center;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.search-icon {
+  color: #f27a21; /* Brand Orange */
+}
+
+/* --- Sub Header --- */
+.sub-header {
+  background-color: #002244;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* --- Content Area --- */
+.content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  padding-bottom: 80px; /* Space for bottom nav */
+}
+
+/* --- Typography --- */
+.page-title {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.page-title h1 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.product-count {
+  font-size: 14px;
+  color: #888;
+  margin-left: 6px;
+}
+
+/* --- Filters --- */
+.filters-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.filters-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.filter-chip {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  color: #333;
+}
+
+.filter-text {
+  color: #f27a21;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.filter-badge {
+  background: #f27a21;
+  color: white;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 11px;
+}
+
+/* --- Promo & Product Cards --- */
+.promo-card, .product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  position: relative;
+  background: #fff;
+}
+
+.promo-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #10b981; /* Green */
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 1;
+}
+
+.promo-content, .product-card {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+}
+
+.promo-image-placeholder, .product-image-placeholder {
+  width: 80px;
+  height: 100px;
+  background: #e6f2ff;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Mock product image block */
+.mock-phone {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  border-radius: 4px;
+}
+
+.promo-details, .product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promo-details h3, .product-details h3 {
+  font-size: 14px;
+  margin: 0 0 4px 0;
+  color: #222;
+  line-height: 1.4;
+}
+
+.promo-details p {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.emi-text {
+  font-size: 12px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.emi-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.current-price {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mrp-price, .discount {
+  font-size: 12px;
+  color: #888;
+}
+
+.action-link {
+  color: #f27a21; /* Brand Orange */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* --- Browse by Price --- */
+.browse-section h2 {
+  font-size: 18px;
+  margin: 24px 0 12px 0;
+}
+
+.price-chips-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  scrollbar-width: none;
+}
+
+.price-chips-container::-webkit-scrollbar {
+  display: none;
+}
+
+.price-chip {
+  background: #f5f5f5;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* --- Bottom Navigation --- */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #003366;
+  font-size: 10px;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: #f27a21; /* Brand Orange for active state */
+}
+
+.nav-item.active .nav-icon {
+  color: #f27a21;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
